@@ -1,0 +1,72 @@
+name: 🐛 Сообщить об ошибке
+description: Сообщите об ошибке или проблеме в сборке Construction
+title: "[Ошибка]: "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за помощь в улучшении Construction!
+        Перед созданием обращения убедитесь, что проблема ещё не была описана.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что произошло?
+      description: Подробно опишите проблему.
+      placeholder: Расскажите, что произошло...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Как воспроизвести проблему?
+      description: Опишите действия, после которых появляется проблема.
+      placeholder: |
+        1. Запустить игру
+        2. Открыть мир
+        3. Выполнить действие
+        4. Произошла ошибка
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия сборки
+      description: Укажите версию Construction.
+      placeholder: Например, 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft
+    attributes:
+      label: Версия Minecraft
+      description: Укажите версию Minecraft.
+      placeholder: Например, 1.21.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи или Crash Report
+      description: Если есть ошибка или краш, приложите лог или Crash Report.
+      placeholder: Вставьте лог сюда...
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты
+      description: При необходимости прикрепите скриншоты проблемы.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительная информация
+      description: Любая другая информация, которая может помочь разобраться.
